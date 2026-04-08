@@ -248,8 +248,8 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 25, 47, 0.85);
-    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    background: rgba(4, 13, 26, 0.9);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     height: 70px;
 }
 
@@ -303,7 +303,7 @@ img {
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0 5%;
+    padding: var(--nav-height) 5% 0;
 }
 
 .hero-content {
