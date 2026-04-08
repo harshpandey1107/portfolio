@@ -334,6 +334,17 @@ img {
     gap: 1.5rem;
 }
 
+.hero-socials .social-icon {
+    font-size: 1.8rem;
+    color: var(--clr-text-muted);
+    transition: var(--transition);
+}
+
+.hero-socials .social-icon:hover {
+    color: var(--clr-accent);
+    transform: translateY(-5px);
+}
+
 .hero-visual {
     position: absolute;
     right: 5%;
