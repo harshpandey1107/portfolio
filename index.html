@@ -18,6 +18,8 @@
 </head>
 
 <body>
+    <!-- Interactive Background -->
+    <div id="particles-js"></div>
 
     <!-- Header & Navigation -->
     <header class="navbar" id="navbar">
@@ -375,6 +377,34 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#64FFDA" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.2, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#64FFDA", "opacity": 0.15, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": { "distance": 180, "line_linked": { "opacity": 0.4 } },
+                    "push": { "particles_nb": 3 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 
 </html>

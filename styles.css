@@ -3,9 +3,9 @@
    ========================================================================== */
 :root {
     /* Colors (Dark Navy/Teal Theme) */
-    --clr-bg: #0A192F;
-    --clr-bg-alt: #112240;
-    --clr-bg-card: rgba(17, 34, 64, 0.7);
+    --clr-bg: #040d1a;
+    --clr-bg-alt: #08162d;
+    --clr-bg-card: rgba(8, 22, 45, 0.8);
     --clr-text-main: #CCD6F6;
     --clr-text-muted: #8892B0;
     --clr-accent: #64FFDA;
@@ -33,9 +33,19 @@ html {
     scroll-behavior: smooth;
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: var(--clr-bg);
+}
+
 body {
     font-family: var(--font-main);
-    background-color: var(--clr-bg);
+    background-color: transparent;
     color: var(--clr-text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -95,7 +105,10 @@ img {
 }
 
 .bg-alt {
-    background-color: var(--clr-bg-alt);
+    background-color: rgba(8, 22, 45, 0.65);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .mb-sm {
@@ -314,7 +327,7 @@ img {
 }
 
 .title {
-    font-size: clamp(30px, 6vw, 60px);
+    font-size: clamp(24px, 5vw, 48px);
     font-weight: 700;
     color: var(--clr-text-muted);
     line-height: 1.1;
