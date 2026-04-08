@@ -297,19 +297,19 @@
             <div class="container reveal">
                 <h2 class="section-title">Certificates</h2>
                 <div class="cert-grid">
-                    <div class="cert-badge card-glass hover-lift">
+                    <div class="cert-badge card-glass hover-lift cert-clickable" data-cert="aiml">
                         <div class="cert-icon"><i class="fas fa-robot"></i></div>
                         <h4>AI/ML Engineering</h4>
                     </div>
-                    <div class="cert-badge card-glass hover-lift">
+                    <div class="cert-badge card-glass hover-lift cert-clickable" data-cert="autocad">
                         <div class="cert-icon"><i class="fas fa-drafting-compass"></i></div>
                         <h4>AutoCAD (3D Design)</h4>
                     </div>
-                    <div class="cert-badge card-glass hover-lift">
+                    <div class="cert-badge card-glass hover-lift cert-clickable" data-cert="management">
                         <div class="cert-icon"><i class="fas fa-tasks"></i></div>
                         <h4>Project Management</h4>
                     </div>
-                    <div class="cert-badge card-glass hover-lift">
+                    <div class="cert-badge card-glass hover-lift cert-clickable" data-cert="vlsi">
                         <div class="cert-icon"><i class="fas fa-memory"></i></div>
                         <h4>VLSI</h4>
                     </div>
@@ -362,6 +362,16 @@
         </section>
     </main>
 
+    <!-- Certificate Modal Structure -->
+    <div class="modal-overlay" id="cert-modal">
+        <div class="modal-content card-glass">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-icon" id="modal-icon"><i class="fas fa-certificate"></i></div>
+            <h3 id="modal-title">Certificate Title</h3>
+            <p id="modal-desc">Detailed description of the certificate goes here.</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
@@ -408,5 +418,6 @@
         });
     </script>
 </body>
+<!--made by vansh-->
 
 </html>

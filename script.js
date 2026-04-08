@@ -83,3 +83,60 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Certificates Modal functionality
+const certData = {
+    'aiml': {
+        title: 'AI/ML Engineering',
+        icon: 'fa-robot',
+        desc: 'Completed an intensive certification focusing on machine learning algorithms, deep learning, and practical AI applications for real-world scenarios.'
+    },
+    'autocad': {
+        title: 'AutoCAD (3D Design)',
+        icon: 'fa-drafting-compass',
+        desc: 'Certified proficiency in 3D modeling, spatial visualization, and detailed CAD design for complex hardware components and architecture.'
+    },
+    'management': {
+        title: 'Project Management',
+        icon: 'fa-tasks',
+        desc: 'Gained skills in strategic planning, agile methodologies, and effective team coordination to successfully deliver technology projects on time.'
+    },
+    'vlsi': {
+        title: 'VLSI',
+        icon: 'fa-memory',
+        desc: 'Specialized training in Very Large Scale Integration, focusing on integrated circuit design, fabrication processes, and hardware optimization.'
+    }
+};
+
+const certBadges = document.querySelectorAll('.cert-clickable');
+const modalOverlay = document.getElementById('cert-modal');
+const modalCloseBtn = document.getElementById('modal-close');
+const modalIconEl = document.getElementById('modal-icon');
+const modalTitleEl = document.getElementById('modal-title');
+const modalDescEl = document.getElementById('modal-desc');
+
+if (certBadges && modalOverlay) {
+    certBadges.forEach(badge => {
+        badge.addEventListener('click', () => {
+            const certId = badge.getAttribute('data-cert');
+            const data = certData[certId];
+            
+            if (data) {
+                modalIconEl.innerHTML = `<i class="fas ${data.icon}"></i>`;
+                modalTitleEl.textContent = data.title;
+                modalDescEl.textContent = data.desc;
+                modalOverlay.classList.add('active');
+            }
+        });
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+        modalOverlay.classList.remove('active');
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            modalOverlay.classList.remove('active');
+        }
+    });
+}
